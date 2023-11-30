@@ -42,6 +42,12 @@ img {
   display: block;
 }
 
+button {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -71,8 +77,6 @@ img {
 }
 .container .header .header-name {
   font-weight: bold;
-  padding: 0px;
-  margin: 0px;
   line-height: 1em;
 }
 .container .welcome {
@@ -100,10 +104,6 @@ img {
   justify-content: center;
   align-items: start;
 }
-.container .languages h1 {
-  margin: 0;
-  padding: 0;
-}
 .container .languages .language-container {
   display: flex;
   justify-content: space-between;
@@ -125,4 +125,32 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+}
+.container .projects .project-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.container .projects .project-container img {
+  height: 30px;
+  margin-right: 10px;
+}
+.container .projects .project-container .play-store {
+  background: #34aa52;
+}
+.container .projects .project-container .button-container {
+  transition: 0.15s ease-in-out;
+  border-radius: 10px;
+}
+.container .projects .project-container .button-container:hover {
+  opacity: 0.75;
+}
+.container .projects .project-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
 }
