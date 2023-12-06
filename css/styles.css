@@ -111,9 +111,6 @@ button {
   flex-direction: row;
   width: 100%;
 }
-.container .languages .language-container .language {
-  margin: 0 20px 0 0;
-}
 .container .languages .language-container h1 {
   font-size: 30px;
 }
@@ -133,24 +130,34 @@ button {
   align-items: center;
   flex-direction: row;
 }
-.container .projects .project-container img {
+.container .projects .project-container .project img {
   height: 30px;
   margin-right: 10px;
 }
-.container .projects .project-container .play-store {
+.container .projects .project-container .project .links {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.container .projects .project-container .project .play-store {
   background: #34aa52;
 }
-.container .projects .project-container .button-container {
+.container .projects .project-container .project .github {
+  background: #0d1117;
+  color: #fff;
+}
+.container .projects .project-container .project .button-container {
   transition: 0.15s ease-in-out;
   border-radius: 10px;
 }
-.container .projects .project-container .button-container:hover {
+.container .projects .project-container .project .button-container:hover {
   opacity: 0.75;
 }
-.container .projects .project-container button {
+.container .projects .project-container .project button {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   padding: 10px;
+  margin-right: 20px;
 }
