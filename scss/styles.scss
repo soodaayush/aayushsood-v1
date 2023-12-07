@@ -1,71 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
-
-$bg-color-line: #cbcbcb;
-$bg-color-page: #19223e;
-$color-cgi: #991f3d;
-$color-black: #555555;
-$color-brand-primary: #3863d9;
-$bg-footer-1: #bbdeea;
-$bg-footer-2: #eafdfc;
-$color-text: hsl(222deg, 22%, 5%);
-$color-background: hsl(0deg, 0%, 100%);
-$color-blurred-background: hsla(0deg, 0%, 100%, 0.85);
-$color-primary: hsl(245deg, 100%, 60%);
-$color-secondary: hsl(333deg, 100%, 45%);
-$color-tertiary: hsl(255deg, 85%, 30%);
-$color-decorative: hsl(200deg, 75%, 65%);
-$color-muted: hsl(210deg, 55%, 92%);
-$color-muted-background: hsla(210deg, 55%, 92%, 0.85);
-$color-info: hsl(245deg, 100%, 60%);
-$color-success: hsl(160deg, 100%, 40%);
-$color-success-background: hsla(160deg, 100%, 40%, 0.1);
-$color-error: hsl(340deg, 95%, 50%);
-$color-error-background: hsla(340deg, 95%, 43%, 0.1);
-$color-alert: hsl(37deg, 100%, 50%);
-$color-alert-background: hsla(52deg, 100%, 50%, 0.25);
-$color-venn-0: hsl(190deg, 100%, 65%);
-$color-venn-1: hsl(340deg, 100%, 65%);
-$color-gray-100: hsl(225deg, 25%, 95%);
-$color-gray-200: hsl(225deg, 16%, 90%);
-$color-gray-300: hsl(225deg, 8%, 80%);
-$color-gray-400: hsl(225deg, 8%, 70%);
-$color-gray-500: hsl(225deg, 7%, 60%);
-$color-gray-600: hsl(225deg, 15%, 50%);
-$color-gray-700: hsl(225deg, 12%, 40%);
-$color-gray-900: hsl(225deg, 25%, 20%);
-$color-gray-1000: hsl(225deg, 15%, 15%);
-$color-subtle-background: hsl(225deg, 25%, 95%);
-$color-subtle-floating: hsl(0deg, 0%, 100%);
-$color-homepage-light: hsl(204deg, 67%, 85%);
-$color-homepage-dark: hsl(202deg, 71%, 90%);
-$color-homepage-bg: hsl(204deg, 67%, 85%);
-$syntax-bg: hsl(225deg, 25%, 97%);
-$syntax-highlight: hsl(225deg, 25%, 93%);
-$syntax-txt: #2a2a2a;
-$syntax-comment: #467790;
-$syntax-prop: #da0079;
-$syntax-bool: #bf00b8;
-$syntax-val: #78909c;
-$syntax-str: #651fff;
-$syntax-name: #aa00ff;
-$syntax-del: rgb(255, 85, 85);
-$syntax-regex: #3600d6;
-$syntax-fn: #3d5afe;
 
 *,
 *::after,
@@ -106,6 +39,7 @@ button {
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+  padding: 20px;
   background: #18324e;
   color: #fff;
 
@@ -119,7 +53,6 @@ button {
     align-items: center;
     width: 100%;
     padding: 10px;
-    max-width: 95vw;
 
     img {
       width: 100%;
@@ -140,7 +73,6 @@ button {
   .welcome {
     width: 100%;
     display: flex;
-    max-width: 95vw;
     padding: 10px;
     flex-direction: column;
     justify-content: center;
@@ -158,22 +90,27 @@ button {
   .languages {
     width: 100%;
     display: flex;
-    max-width: 95vw;
     padding: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: start;
 
-    .language-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-
+    .languages-container {
       width: 100%;
+      overflow-y: hidden;
+      display: flex;
+      align-items: center;
+      text-align: center;
 
-      h1 {
-        font-size: 30px;
+      .language-container {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+
+        h1 {
+          font-size: 30px;
+        }
       }
     }
   }
@@ -181,7 +118,6 @@ button {
   .projects {
     width: 100%;
     display: flex;
-    max-width: 95vw;
     padding: 10px;
     flex-direction: column;
     justify-content: center;
@@ -192,22 +128,21 @@ button {
       width: 100%;
       justify-content: space-between;
       align-items: center;
-      flex-direction: row;
 
       .project {
-        img {
+        .website-logo {
           height: 30px;
           margin-right: 10px;
         }
 
         .links {
           display: flex;
-          justify-content: start;
           align-items: center;
         }
 
         .play-store {
           background: #34aa52;
+          color: #fff;
         }
 
         .github {
@@ -233,6 +168,76 @@ button {
           margin-right: 20px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .projects {
+    .project-container {
+      .promo-image {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    .project-container {
+      .project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .promo-image {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .languages {
+    .languages-container {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .languages {
+    .languages-container {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  .projects {
+    .project-container {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  .projects {
+    .project-container {
+      flex-direction: row;
     }
   }
 }

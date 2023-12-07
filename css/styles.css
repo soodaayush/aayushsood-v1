@@ -1,19 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 *,
 *::after,
 *::before {
@@ -53,6 +38,7 @@ button {
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+  padding: 20px;
   background: #18324e;
   color: #fff;
 }
@@ -65,7 +51,6 @@ button {
   align-items: center;
   width: 100%;
   padding: 10px;
-  max-width: 95vw;
 }
 .container .header img {
   width: 100%;
@@ -82,7 +67,6 @@ button {
 .container .welcome {
   width: 100%;
   display: flex;
-  max-width: 95vw;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
@@ -98,26 +82,30 @@ button {
 .container .languages {
   width: 100%;
   display: flex;
-  max-width: 95vw;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
-.container .languages .language-container {
+.container .languages .languages-container {
+  width: 100%;
+  overflow-y: hidden;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  text-align: center;
+}
+.container .languages .languages-container .language-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
   width: 100%;
 }
-.container .languages .language-container h1 {
+.container .languages .languages-container .language-container h1 {
   font-size: 30px;
 }
 .container .projects {
   width: 100%;
   display: flex;
-  max-width: 95vw;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
@@ -128,19 +116,18 @@ button {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 }
-.container .projects .project-container .project img {
+.container .projects .project-container .project .website-logo {
   height: 30px;
   margin-right: 10px;
 }
 .container .projects .project-container .project .links {
   display: flex;
-  justify-content: start;
   align-items: center;
 }
 .container .projects .project-container .project .play-store {
   background: #34aa52;
+  color: #fff;
 }
 .container .projects .project-container .project .github {
   background: #0d1117;
@@ -160,4 +147,50 @@ button {
   border-radius: 10px;
   padding: 10px;
   margin-right: 20px;
+}
+
+@media (min-width: 600px) {
+  .projects .project-container .promo-image {
+    height: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .projects .project-container .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .projects .project-container p {
+    text-align: center;
+  }
+  .projects .project-container .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .projects .project-container .promo-image {
+    height: 200px;
+  }
+}
+@media (max-width: 1000px) {
+  .languages .languages-container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1000px) {
+  .languages .languages-container {
+    flex-direction: row;
+  }
+}
+@media (max-width: 1800px) {
+  .projects .project-container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1800px) {
+  .projects .project-container {
+    flex-direction: row;
+  }
 }
