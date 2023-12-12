@@ -213,6 +213,10 @@ button {
   .inner-container {
     width: 100%;
   }
+  .languages .heading {
+    text-align: center;
+    width: 100%;
+  }
   .projects .heading {
     text-align: center;
     width: 100%;
