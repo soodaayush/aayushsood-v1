@@ -18,6 +18,7 @@ html {
 
 body {
   margin: 0;
+  background: #18324e;
 }
 
 a {
@@ -37,11 +38,22 @@ button {
 .container {
   display: flex;
   align-items: center;
-  min-height: 100vh;
   flex-direction: column;
   padding: 20px;
   background: #18324e;
   color: #fff;
+
+  .reveal {
+    position: relative;
+    transform: translateY(75px);
+    opacity: 0.25;
+    transition: all 1s ease;
+  }
+
+  .active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 
   .heading {
     font-size: 50px;
@@ -57,16 +69,10 @@ button {
     img {
       width: 100%;
       height: 40px;
-      transition: 0.15s ease-in-out;
-    }
-
-    a {
-      transition: 0.15s ease-in-out;
     }
 
     .header-name {
       font-weight: bold;
-      line-height: 1em;
     }
   }
 
@@ -172,6 +178,26 @@ button {
           padding: 10px;
           margin-right: 20px;
         }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    a {
+      color: white;
+      transition: 0.15s ease-in-out;
+
+      &:nth-last-child(n + 2) {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        opacity: 0.75;
       }
     }
   }
@@ -291,11 +317,21 @@ button {
   }
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1400px) {
   .container {
     .welcome {
       img {
         height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    .welcome {
+      img {
+        height: 200px;
       }
     }
   }
@@ -349,5 +385,17 @@ button {
 @media (min-width: 3500px) {
   .inner-container {
     width: 40%;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 400px) {
+  .footer {
+    flex-direction: row;
   }
 }
