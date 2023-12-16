@@ -126,6 +126,13 @@ button {
 }
 .container .projects .project-container .project {
   margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.container .projects .project-container .project:hover {
+  box-shadow: rgba(253, 252, 252, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .container .projects .project-container .project .website-logo {
   height: 30px;
