@@ -129,7 +129,6 @@ button {
   margin: 20px;
   padding: 20px;
   border-radius: 20px;
-  width: 450px;
   transition: box-shadow 0.3s ease-in-out;
 }
 .container .projects .project-container .project:hover {
@@ -184,6 +183,16 @@ button {
   opacity: 0.75;
 }
 
+@media (min-width: 450px) {
+  .project {
+    width: 450px;
+  }
+}
+@media (max-width: 450px) {
+  .project {
+    width: 300px;
+  }
+}
 @media (min-width: 500px) {
   .projects .project-container .project {
     display: flex;
@@ -211,6 +220,7 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
   }
   .projects .project-container p {
     text-align: center;
@@ -222,7 +232,7 @@ button {
     width: 100%;
   }
   .projects .project-container .promo-image {
-    height: 200px;
+    height: 150px;
   }
 }
 @media (max-width: 900px) {

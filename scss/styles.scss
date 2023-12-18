@@ -143,7 +143,6 @@ button {
         margin: 20px;
         padding: 20px;
         border-radius: 20px;
-        width: 450px;
         transition: box-shadow 0.3s ease-in-out;
 
         &:hover {
@@ -213,6 +212,18 @@ button {
   }
 }
 
+@media (min-width: 450px) {
+  .project {
+    width: 450px;
+  }
+}
+
+@media (max-width: 450px) {
+  .project {
+    width: 300px;
+  }
+}
+
 @media (min-width: 500px) {
   .projects {
     .project-container {
@@ -250,6 +261,7 @@ button {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        text-align: center;
       }
 
       p {
@@ -264,7 +276,7 @@ button {
       }
 
       .promo-image {
-        height: 200px;
+        height: 150px;
       }
     }
   }
