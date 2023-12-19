@@ -1,6 +1,8 @@
 {
   "name": "Aayush Sood",
   "short_name": "Aayush Sood",
+  "start_url": "aayushsood.com",
+  "prefer_related_applications": "false",
   "icons": [
     {
       "src": "images/favicon/android-chrome-192x192.png",
