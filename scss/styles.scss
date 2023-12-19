@@ -160,9 +160,34 @@ button {
           align-items: center;
         }
 
+        .tags {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .tag {
+            button {
+              background: rgba(45, 212, 191, 0.1);
+              border-radius: 10px;
+              cursor: auto;
+              transition: 0.15s ease-in-out;
+              color: #64ffda;
+
+              &:hover {
+                opacity: 0.75;
+              }
+            }
+          }
+        }
+
         button {
           background: #0d1117;
           color: #fff;
+        }
+
+        .promo-image {
+          cursor: pointer;
         }
 
         .button-container {
@@ -210,12 +235,27 @@ button {
 @media (min-width: 450px) {
   .project {
     width: 450px;
+    height: 625px;
+
+    .tags {
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
   }
 }
 
 @media (max-width: 450px) {
   .project {
     width: 300px;
+    height: 750px;
+  }
+
+  .tags {
+    flex-direction: column;
+
+    .tag {
+      margin-bottom: 20px;
+    }
   }
 }
 
