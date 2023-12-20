@@ -87,13 +87,25 @@ button {
       border-radius: 5000px;
     }
 
+    button {
+      background: rgba(45, 212, 191, 0.1);
+      border-radius: 10px;
+      padding: 10px;
+      transition: 0.15s ease-in-out;
+      color: #64ffda;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
     h1,
     h2 {
       margin: 0;
       padding: 0;
       font-size: 50px;
       font-weight: 500;
-      border-bottom: 5px solid #1a77ff;
+      border-bottom: 5px solid #8892b0;
     }
   }
 
