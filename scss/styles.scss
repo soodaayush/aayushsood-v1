@@ -66,9 +66,16 @@ button {
     width: 100%;
     padding: 10px;
 
-    img {
-      width: 100%;
-      height: 40px;
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 40px;
+        margin-left: 10px;
+      }
     }
 
     .header-name {

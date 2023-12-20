@@ -62,9 +62,15 @@ button {
   width: 100%;
   padding: 10px;
 }
-.container .header img {
+.container .header .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .header .links img {
   width: 100%;
   height: 40px;
+  margin-left: 10px;
 }
 .container .header .header-name {
   font-size: 1.5rem;
