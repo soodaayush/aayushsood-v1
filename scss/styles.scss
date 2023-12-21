@@ -111,16 +111,21 @@ button {
 
     .languages-container {
       width: 100%;
-      overflow-y: hidden;
       display: flex;
       align-items: center;
       text-align: center;
 
       .language-container {
         display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        flex-direction: column;
+        flex-wrap: wrap;
         width: 100%;
+
+        div {
+          width: 300px;
+        }
 
         h1 {
           font-size: 30px;
@@ -140,6 +145,7 @@ button {
     .project-container {
       display: flex;
       width: 100%;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
 
@@ -338,18 +344,6 @@ button {
       text-align: center;
       width: 100%;
     }
-
-    .languages-container {
-      flex-direction: column;
-    }
-  }
-}
-
-@media (min-width: 900px) {
-  .languages {
-    .languages-container {
-      flex-direction: row;
-    }
   }
 }
 
@@ -370,22 +364,12 @@ button {
       text-align: center;
       width: 100%;
     }
-
-    .project-container {
-      flex-direction: column;
-    }
   }
 }
 
 @media (min-width: 1300px) {
   .inner-container {
     max-width: 100%;
-  }
-
-  .projects {
-    .project-container {
-      flex-direction: row;
-    }
   }
 }
 

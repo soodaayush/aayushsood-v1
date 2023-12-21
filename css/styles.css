@@ -101,16 +101,20 @@ button {
 }
 .container .languages .languages-container {
   width: 100%;
-  overflow-y: hidden;
   display: flex;
   align-items: center;
   text-align: center;
 }
 .container .languages .languages-container .language-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
+}
+.container .languages .languages-container .language-container div {
+  width: 300px;
 }
 .container .languages .languages-container .language-container h1 {
   font-size: 30px;
@@ -126,6 +130,7 @@ button {
 .container .projects .project-container {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -280,14 +285,6 @@ button {
     text-align: center;
     width: 100%;
   }
-  .languages .languages-container {
-    flex-direction: column;
-  }
-}
-@media (min-width: 900px) {
-  .languages .languages-container {
-    flex-direction: row;
-  }
 }
 @media (max-width: 1300px) {
   .inner-container {
@@ -301,16 +298,10 @@ button {
     text-align: center;
     width: 100%;
   }
-  .projects .project-container {
-    flex-direction: column;
-  }
 }
 @media (min-width: 1300px) {
   .inner-container {
     max-width: 100%;
-  }
-  .projects .project-container {
-    flex-direction: row;
   }
 }
 @media (min-width: 1400px) {
