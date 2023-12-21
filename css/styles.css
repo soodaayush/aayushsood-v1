@@ -84,16 +84,6 @@ button {
 .container .welcome img {
   border-radius: 5000px;
 }
-.container .welcome button {
-  background: rgba(45, 212, 191, 0.1);
-  border-radius: 10px;
-  padding: 10px;
-  transition: 0.15s ease-in-out;
-  color: #64ffda;
-}
-.container .welcome button:hover {
-  opacity: 0.75;
-}
 .container .welcome h1,
 .container .welcome h2 {
   margin: 0;
@@ -148,9 +138,15 @@ button {
   border-radius: 20px;
   transition: box-shadow 0.3s ease-in-out;
 }
+.container .projects .project-container .project h1 {
+  transition: 0.15s ease-in-out;
+}
 .container .projects .project-container .project:hover {
   box-shadow: #8892b0 0px 5px 15px;
   transition: box-shadow 0.3s ease-in-out;
+}
+.container .projects .project-container .project:hover h1 {
+  color: #64ffda;
 }
 .container .projects .project-container .project .website-logo {
   height: 30px;

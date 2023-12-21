@@ -92,18 +92,6 @@ button {
       border-radius: 5000px;
     }
 
-    button {
-      background: rgba(45, 212, 191, 0.1);
-      border-radius: 10px;
-      padding: 10px;
-      transition: 0.15s ease-in-out;
-      color: #64ffda;
-
-      &:hover {
-        opacity: 0.75;
-      }
-    }
-
     h1,
     h2 {
       margin: 0;
@@ -164,9 +152,17 @@ button {
         border-radius: 20px;
         transition: box-shadow 0.3s ease-in-out;
 
+        h1 {
+          transition: 0.15s ease-in-out;
+        }
+
         &:hover {
           box-shadow: #8892b0 0px 5px 15px;
           transition: box-shadow 0.3s ease-in-out;
+
+          h1 {
+            color: #64ffda;
+          }
         }
 
         .website-logo {
