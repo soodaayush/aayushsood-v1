@@ -63,7 +63,7 @@ button {
 }
 .container .header .links {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
 }
 .container .header .links img {
@@ -140,6 +140,9 @@ button {
   align-items: center;
 }
 .container .projects .project-container .project {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   margin: 20px;
   padding: 20px;
   border-radius: 20px;

@@ -66,7 +66,7 @@ button {
 
     .links {
       display: flex;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
 
       img {
@@ -156,6 +156,9 @@ button {
       align-items: center;
 
       .project {
+        display: flex;
+        justify-content: start;
+        align-items: center;
         margin: 20px;
         padding: 20px;
         border-radius: 20px;
