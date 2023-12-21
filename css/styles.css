@@ -364,6 +364,14 @@ button {
     flex-direction: column;
   }
 }
+@media (max-width: 450px) {
+  .header .links {
+    flex-direction: column;
+  }
+  .header .links a {
+    margin-bottom: 10px;
+  }
+}
 @media (min-width: 400px) {
   .footer {
     flex-direction: row;

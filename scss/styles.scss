@@ -466,6 +466,18 @@ button {
   }
 }
 
+@media (max-width: 450px) {
+  .header {
+    .links {
+      flex-direction: column;
+
+      a {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 @media (min-width: 400px) {
   .footer {
     flex-direction: row;
