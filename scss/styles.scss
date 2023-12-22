@@ -132,6 +132,14 @@ button {
         div {
           width: 300px;
           margin-bottom: 20px;
+
+          h1 {
+            transition: 0.15s ease-in-out;
+
+            &:hover {
+              color: #64ffda;
+            }
+          }
         }
 
         h1 {
@@ -261,9 +269,19 @@ button {
       flex-wrap: wrap;
       width: 100%;
 
-      div {
+      .interest {
         width: 300px;
         margin-bottom: 20px;
+        color: #fff;
+
+        a {
+          transition: 0.15s ease-in-out;
+          color: #fff;
+
+          &:hover {
+            color: #64ffda;
+          }
+        }
       }
 
       h1 {

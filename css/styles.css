@@ -122,6 +122,12 @@ button {
   width: 300px;
   margin-bottom: 20px;
 }
+.container .languages .languages-container .language-container div h1 {
+  transition: 0.15s ease-in-out;
+}
+.container .languages .languages-container .language-container div h1:hover {
+  color: #64ffda;
+}
 .container .languages .languages-container .language-container h1 {
   font-size: 30px;
 }
@@ -225,9 +231,17 @@ button {
   flex-wrap: wrap;
   width: 100%;
 }
-.container .interests .interests-container div {
+.container .interests .interests-container .interest {
   width: 300px;
   margin-bottom: 20px;
+  color: #fff;
+}
+.container .interests .interests-container .interest a {
+  transition: 0.15s ease-in-out;
+  color: #fff;
+}
+.container .interests .interests-container .interest a:hover {
+  color: #64ffda;
 }
 .container .interests .interests-container h1 {
   font-size: 30px;
