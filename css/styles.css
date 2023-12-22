@@ -29,6 +29,7 @@ img {
 
 button {
   border: none;
+  outline: none;
   font-family: "Inter", sans-serif;
   cursor: pointer;
 }
@@ -99,6 +100,10 @@ button {
   justify-content: center;
   align-items: start;
 }
+.container .languages .heading {
+  text-align: center;
+  width: 100%;
+}
 .container .languages .languages-container {
   width: 100%;
   display: flex;
@@ -115,6 +120,7 @@ button {
 }
 .container .languages .languages-container .language-container div {
   width: 300px;
+  margin-bottom: 20px;
 }
 .container .languages .languages-container .language-container h1 {
   font-size: 30px;
@@ -126,6 +132,10 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+}
+.container .projects .heading {
+  width: 100%;
+  text-align: center;
 }
 .container .projects .project-container {
   display: flex;
@@ -203,6 +213,25 @@ button {
   padding: 10px;
   margin-right: 20px;
 }
+.container .interests .heading {
+  width: 100%;
+  text-align: center;
+}
+.container .interests .interests-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container .interests .interests-container div {
+  width: 300px;
+  margin-bottom: 20px;
+}
+.container .interests .interests-container h1 {
+  font-size: 30px;
+}
 .container .footer {
   display: flex;
   justify-content: space-between;
@@ -274,22 +303,8 @@ button {
     height: 150px;
   }
 }
-@media (max-width: 900px) {
-  .languages .heading {
-    text-align: center;
-    width: 100%;
-  }
-}
 @media (max-width: 1300px) {
   .inner-container {
-    width: 100%;
-  }
-  .languages .heading {
-    text-align: center;
-    width: 100%;
-  }
-  .projects .heading {
-    text-align: center;
     width: 100%;
   }
 }

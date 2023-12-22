@@ -29,6 +29,7 @@ img {
 
 button {
   border: none;
+  outline: none;
   font-family: "Inter", sans-serif;
   cursor: pointer;
 }
@@ -109,6 +110,11 @@ button {
     justify-content: center;
     align-items: start;
 
+    .heading {
+      text-align: center;
+      width: 100%;
+    }
+
     .languages-container {
       width: 100%;
       display: flex;
@@ -125,6 +131,7 @@ button {
 
         div {
           width: 300px;
+          margin-bottom: 20px;
         }
 
         h1 {
@@ -141,6 +148,11 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+
+    .heading {
+      width: 100%;
+      text-align: center;
+    }
 
     .project-container {
       display: flex;
@@ -231,6 +243,31 @@ button {
           padding: 10px;
           margin-right: 20px;
         }
+      }
+    }
+  }
+
+  .interests {
+    .heading {
+      width: 100%;
+      text-align: center;
+    }
+
+    .interests-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      div {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 30px;
       }
     }
   }
@@ -328,32 +365,9 @@ button {
   }
 }
 
-@media (max-width: 900px) {
-  .languages {
-    .heading {
-      text-align: center;
-      width: 100%;
-    }
-  }
-}
-
 @media (max-width: 1300px) {
   .inner-container {
     width: 100%;
-  }
-
-  .languages {
-    .heading {
-      text-align: center;
-      width: 100%;
-    }
-  }
-
-  .projects {
-    .heading {
-      text-align: center;
-      width: 100%;
-    }
   }
 }
 
