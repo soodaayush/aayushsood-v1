@@ -50,7 +50,7 @@ button {
 .container .reveal {
   position: relative;
   transform: translateY(75px);
-  opacity: 0.25;
+  opacity: 0.5;
   transition: all 1s ease;
 }
 .container .active {
