@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Wotfard";
+  font-weight: 400;
+  src: url("../fonts/wotfard-regular-webfont.woff2") format("woff2"),
+    url("../fonts/wotfard-regular-webfont.ttf") format("ttf");
+}
+
 *,
 *::after,
 *::before {
@@ -11,7 +18,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Wotfard", sans-serif;
 }
 
 body {
@@ -30,8 +37,8 @@ img {
 button {
   border: none;
   outline: none;
-  font-family: "Inter", sans-serif;
   cursor: pointer;
+  font-family: "Wotfard", sans-serif;
 }
 
 .container {
