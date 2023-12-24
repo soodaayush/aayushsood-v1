@@ -2,7 +2,8 @@
   font-family: "Wotfard";
   font-weight: 400;
   src: url("../fonts/wotfard-regular-webfont.woff2") format("woff2"),
-    url("../fonts/wotfard-regular-webfont.ttf") format("ttf");
+    url("../fonts/wotfard-regular-webfont.ttf") format("ttf"),
+    url("../fonts/wotfard-regular-webfont.eot") format("eot");
 }
 
 *,
@@ -416,31 +417,22 @@ button {
   }
 }
 
+@media (max-width: 1600px) {
+  .container {
+    .welcome {
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1400px) {
-  .container {
-    .welcome {
-      img {
-        height: 200px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1100px) {
-  .container {
-    .welcome {
-      img {
-        height: 200px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1000px) {
   .container {
     .welcome {
       width: 100%;
       flex-direction: column;
+      text-align: center;
     }
   }
 }
@@ -450,30 +442,6 @@ button {
     .welcome {
       width: 100%;
     }
-  }
-}
-
-@media (max-width: 2100px) {
-  .inner-container {
-    width: 100%;
-  }
-}
-
-@media (min-width: 2100px) {
-  .inner-container {
-    width: 60%;
-  }
-}
-
-@media (min-width: 2400px) {
-  .inner-container {
-    width: 50%;
-  }
-}
-
-@media (min-width: 3500px) {
-  .inner-container {
-    width: 40%;
   }
 }
 
@@ -498,5 +466,35 @@ button {
 @media (min-width: 400px) {
   .footer {
     flex-direction: row;
+  }
+}
+
+@media (max-width: 1800px) {
+  .inner-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .inner-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2400px) {
+  .inner-container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 3500px) {
+  .inner-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 4000px) {
+  .inner-container {
+    width: 40%;
   }
 }
