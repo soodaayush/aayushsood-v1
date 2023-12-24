@@ -180,6 +180,7 @@ button {
 }
 .container .projects .project-container .project .website-logo {
   height: 30px;
+  width: 30px;
   margin-right: 10px;
 }
 .container .projects .project-container .project .links {
@@ -303,7 +304,6 @@ button {
   }
   .projects .project-container .promo-image {
     height: 200px;
-    width: 350px;
   }
 }
 @media (max-width: 500px) {
@@ -325,7 +325,6 @@ button {
   }
   .projects .project-container .promo-image {
     height: 150px;
-    width: 250px;
   }
 }
 @media (max-width: 1300px) {
