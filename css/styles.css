@@ -345,7 +345,7 @@ button {
     height: 200px;
   }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .container .welcome {
     width: 100%;
     flex-direction: column;
@@ -382,15 +382,20 @@ button {
 }
 @media (min-width: 1800px) {
   .inner-container {
-    width: 70%;
+    width: 80%;
   }
 }
 @media (min-width: 2400px) {
   .inner-container {
+    width: 70%;
+  }
+}
+@media (min-width: 2850px) {
+  .inner-container {
     width: 60%;
   }
 }
-@media (min-width: 3500px) {
+@media (min-width: 3350px) {
   .inner-container {
     width: 50%;
   }
