@@ -2,6 +2,7 @@
   font-family: "Wotfard";
   font-weight: 400;
   src: url("../fonts/wotfard-regular-webfont.woff2") format("woff2"), url("../fonts/wotfard-regular-webfont.ttf") format("ttf"), url("../fonts/wotfard-regular-webfont.eot") format("eot");
+  font-display: swap;
 }
 *,
 *::after,
@@ -302,6 +303,7 @@ button {
   }
   .projects .project-container .promo-image {
     height: 200px;
+    width: 350px;
   }
 }
 @media (max-width: 500px) {
@@ -323,6 +325,7 @@ button {
   }
   .projects .project-container .promo-image {
     height: 150px;
+    width: 250px;
   }
 }
 @media (max-width: 1300px) {
@@ -338,11 +341,13 @@ button {
 @media (min-width: 1400px) {
   .container .welcome img {
     height: 300px;
+    width: 200px;
   }
 }
 @media (max-width: 1600px) {
   .container .welcome img {
     height: 200px;
+    width: 200px;
   }
 }
 @media (max-width: 1200px) {
