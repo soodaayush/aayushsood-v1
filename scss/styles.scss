@@ -68,30 +68,58 @@ button {
 
   .heading {
     font-size: 50px;
+    padding-bottom: 20px;
   }
 
   .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 20px;
     background: #112240;
+    width: 100%;
 
-    .links {
-      display: flex;
-      justify-content: end;
-      align-items: center;
+    .inner-header {
+      padding: 20px;
 
-      img {
-        width: 40px;
-        height: 40px;
-        margin-left: 10px;
+      .links {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-left: 10px;
+        }
       }
-    }
 
-    .header-name {
-      font-size: 1.5rem;
+      .header-name {
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+        font-size: 1.5rem;
+        width: 300px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typewriter 2s steps(44) 1s 1 normal both,
+          blinkTextCursor 500ms steps(44) infinite normal;
+
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+          to {
+            width: 225px;
+          }
+        }
+        @keyframes blinkTextCursor {
+          from {
+            border-right-color: #fff;
+          }
+          to {
+            border-right-color: transparent;
+          }
+        }
+      }
     }
   }
 
@@ -416,7 +444,7 @@ button {
 
 @media (min-width: 1300px) {
   .inner-container {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -466,13 +494,17 @@ button {
   }
 }
 
-@media (max-width: 450px) {
-  .header {
-    .links {
-      flex-direction: column;
+@media (max-width: 500px) {
+  .container {
+    padding-top: 250px;
 
-      a {
-        margin-bottom: 10px;
+    .header {
+      .links {
+        flex-direction: column;
+
+        a {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -484,7 +516,14 @@ button {
   }
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1900px) {
+  .inner-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .inner-container {
     width: 100%;
   }
@@ -492,29 +531,58 @@ button {
 
 @media (min-width: 1800px) {
   .inner-container {
-    width: 80%;
+    width: 100%;
   }
 }
 
-@media (min-width: 2400px) {
+@media (min-width: 1900px) {
+  .inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  .inner-container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .inner-header {
+    width: 70%;
+  }
+
   .inner-container {
     width: 70%;
   }
 }
 
-@media (min-width: 2850px) {
+@media (min-width: 2750px) {
+  .inner-header {
+    width: 60%;
+  }
+
   .inner-container {
     width: 60%;
   }
 }
 
 @media (min-width: 3350px) {
+  .inner-header {
+    width: 50%;
+  }
+
   .inner-container {
     width: 50%;
   }
 }
 
 @media (min-width: 4000px) {
+  .inner-header {
+    width: 40%;
+  }
+
   .inner-container {
     width: 40%;
   }
