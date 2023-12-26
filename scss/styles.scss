@@ -192,32 +192,11 @@ button {
       width: 300px;
       white-space: nowrap;
       overflow: hidden;
-      animation: typewriter 2s steps(44) 1s 1 normal both,
-        blinkTextCursor 1s steps(44) infinite normal;
-      border-bottom: 5px solid var(--border-color);
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-        to {
-          width: 745px;
-        }
-      }
-      @keyframes blinkTextCursor {
-        from {
-          border-right-color: var(--text-color);
-        }
-        to {
-          border-right-color: var(--dark-color);
-        }
-      }
     }
 
     h1 {
       margin: 0;
       padding: 0;
-      font-size: 50px;
     }
   }
 
@@ -552,6 +531,130 @@ button {
   }
 }
 
+@media (min-width: 260px) {
+  .welcome {
+    h1 {
+      font-size: 20px;
+    }
+
+    .fullstack {
+      animation: typewriter 2s steps(44) 1s 1 normal both,
+        blinkTextCursor 1s steps(44) infinite normal;
+      border-bottom: 5px solid var(--border-color);
+
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+        to {
+          width: 285px;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: var(--text-color);
+        }
+        to {
+          border-right-color: var(--dark-color);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) {
+  .welcome {
+    h1 {
+      font-size: 20px;
+    }
+
+    .fullstack {
+      animation: typewriter 2s steps(44) 1s 1 normal both,
+        blinkTextCursor 1s steps(44) infinite normal;
+      border-bottom: 5px solid var(--border-color);
+
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+        to {
+          width: 285px;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: var(--text-color);
+        }
+        to {
+          border-right-color: var(--dark-color);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 460px) {
+  .welcome {
+    h1 {
+      font-size: 30px;
+    }
+
+    .fullstack {
+      animation: typewriter 2s steps(44) 1s 1 normal both,
+        blinkTextCursor 1s steps(44) infinite normal;
+      border-bottom: 5px solid var(--border-color);
+
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+        to {
+          width: 435px;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: var(--text-color);
+        }
+        to {
+          border-right-color: var(--dark-color);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .welcome {
+    h1 {
+      font-size: 50px;
+    }
+
+    .fullstack {
+      animation: typewriter 2s steps(44) 1s 1 normal both,
+        blinkTextCursor 1s steps(44) infinite normal;
+      border-bottom: 5px solid var(--border-color);
+
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+        to {
+          width: 740px;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: var(--text-color);
+        }
+        to {
+          border-right-color: var(--dark-color);
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 1400px) {
   .container {
     welcome {
@@ -579,7 +682,6 @@ button {
     .inner-welcome {
       width: 100%;
       flex-direction: column;
-      text-align: center;
     }
   }
 }

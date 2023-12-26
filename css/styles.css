@@ -171,29 +171,10 @@ button {
   width: 300px;
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite normal;
-  border-bottom: 5px solid var(--border-color);
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 745px;
-  }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: var(--text-color);
-  }
-  to {
-    border-right-color: var(--dark-color);
-  }
 }
 .container .welcome h1 {
   margin: 0;
   padding: 0;
-  font-size: 50px;
 }
 .container .languages {
   width: 100%;
@@ -464,6 +445,106 @@ button {
     width: 100%;
   }
 }
+@media (min-width: 260px) {
+  .welcome h1 {
+    font-size: 20px;
+  }
+  .welcome .fullstack {
+    animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite normal;
+    border-bottom: 5px solid var(--border-color);
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 285px;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: var(--text-color);
+    }
+    to {
+      border-right-color: var(--dark-color);
+    }
+  }
+}
+@media (min-width: 300px) {
+  .welcome h1 {
+    font-size: 20px;
+  }
+  .welcome .fullstack {
+    animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite normal;
+    border-bottom: 5px solid var(--border-color);
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 285px;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: var(--text-color);
+    }
+    to {
+      border-right-color: var(--dark-color);
+    }
+  }
+}
+@media (min-width: 460px) {
+  .welcome h1 {
+    font-size: 30px;
+  }
+  .welcome .fullstack {
+    animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite normal;
+    border-bottom: 5px solid var(--border-color);
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 435px;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: var(--text-color);
+    }
+    to {
+      border-right-color: var(--dark-color);
+    }
+  }
+}
+@media (min-width: 760px) {
+  .welcome h1 {
+    font-size: 50px;
+  }
+  .welcome .fullstack {
+    animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite normal;
+    border-bottom: 5px solid var(--border-color);
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 740px;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: var(--text-color);
+    }
+    to {
+      border-right-color: var(--dark-color);
+    }
+  }
+}
 @media (min-width: 1400px) {
   .container welcome img {
     height: 300px;
@@ -480,7 +561,6 @@ button {
   .container .inner-welcome {
     width: 100%;
     flex-direction: column;
-    text-align: center;
   }
 }
 @media (min-width: 1000px) {
