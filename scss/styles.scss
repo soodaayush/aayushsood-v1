@@ -224,7 +224,7 @@ button {
   .languages {
     width: 100%;
     display: flex;
-    padding: 20px;
+    padding: 40px 0 40px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -278,7 +278,7 @@ button {
   .projects {
     width: 100%;
     display: flex;
-    padding: 20px;
+    padding: 40px 0 40px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -397,6 +397,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 0 40px 0;
     width: 100%;
     background: var(--soft-color);
 
@@ -443,8 +444,7 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 40px;
-    padding: 20px;
+    padding: 40px 0 40px 0;
     background: var(--footer-bg-color);
 
     .content {
