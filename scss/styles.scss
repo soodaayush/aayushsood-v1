@@ -161,35 +161,6 @@ button {
     padding-bottom: 20px;
   }
 
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-
-    .inner-header {
-      padding: 40px 0 40px 0;
-
-      .links {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-
-        img {
-          width: 40px;
-          height: 40px;
-          margin-left: 10px;
-        }
-      }
-
-      .header-name {
-        font-size: 1.5rem;
-        color: var(--header-text-color);
-      }
-    }
-  }
-
   .welcome {
     background-image: var(--gradient-bg);
     background-size: 100% 100%;
@@ -199,6 +170,34 @@ button {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .inner-header {
+        padding: 40px 0 40px 0;
+
+        .links {
+          display: flex;
+          justify-content: end;
+          align-items: center;
+
+          img {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+          }
+        }
+
+        .header-name {
+          font-size: 1.5rem;
+          color: var(--header-text-color);
+        }
+      }
+    }
 
     .content {
       display: flex;
@@ -553,13 +552,21 @@ button {
 }
 
 @media (max-width: 1300px) {
-  .inner-container {
+  .inner-header {
+    width: 100%;
+  }
+
+  .content {
     width: 100%;
   }
 }
 
 @media (min-width: 1300px) {
-  .inner-container {
+  .inner-header {
+    width: 100%;
+  }
+
+  .content {
     width: 100%;
   }
 }
