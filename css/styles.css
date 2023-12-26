@@ -1,5 +1,37 @@
 :root {
   --soft-color: #0e141b;
+  --gradient-bg: linear-gradient(
+    180deg,
+    hsl(212deg 32% 8%) 0%,
+    hsl(212deg 32% 8%) 8%,
+    hsl(211deg 32% 8%) 17%,
+    hsl(211deg 32% 8%) 25%,
+    hsl(211deg 32% 8%) 33%,
+    hsl(210deg 32% 9%) 42%,
+    hsl(210deg 32% 9%) 50%,
+    hsl(210deg 31% 9%) 58%,
+    hsl(211deg 30% 10%) 67%,
+    hsl(211deg 30% 10%) 75%,
+    hsl(211deg 29% 11%) 83%,
+    hsl(212deg 29% 11%) 92%,
+    hsl(212deg 29% 12%) 100%
+  );
+  --footer-gradient-bg: linear-gradient(
+    0deg,
+    hsl(212deg 32% 8%) 0%,
+    hsl(212deg 32% 8%) 8%,
+    hsl(211deg 32% 8%) 17%,
+    hsl(211deg 32% 8%) 25%,
+    hsl(211deg 32% 8%) 33%,
+    hsl(210deg 32% 9%) 42%,
+    hsl(210deg 32% 9%) 50%,
+    hsl(210deg 31% 9%) 58%,
+    hsl(211deg 30% 10%) 67%,
+    hsl(211deg 30% 10%) 75%,
+    hsl(211deg 29% 11%) 83%,
+    hsl(212deg 29% 11%) 92%,
+    hsl(212deg 29% 12%) 100%
+  );
   --dark-color: #161e26;
   --border-color: #8892b0;
   --cursor-color: rgba(255, 255, 255, 0.75);
@@ -121,11 +153,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--dark-color);
   width: 100%;
 }
 .container .header .inner-header {
-  padding: 20px;
+  padding: 40px 0 40px 0;
 }
 .container .header .inner-header .links {
   display: flex;
@@ -142,12 +173,13 @@ button {
   color: var(--header-text-color);
 }
 .container .welcome {
-  background-color: var(--dark-color);
+  background-image: var(--gradient-bg);
   background-size: 100% 100%;
   width: 100%;
   padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .container .welcome .content {
@@ -155,7 +187,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.container .welcome img {
+.container .welcome .picture {
   border-radius: 50%;
 }
 .container .welcome u {
@@ -363,7 +395,7 @@ button {
   align-items: center;
   width: 100%;
   padding: 40px 20px 40px 20px;
-  background: var(--footer-bg-color);
+  background: var(--footer-gradient-bg);
 }
 .container .footer .content {
   display: flex;
