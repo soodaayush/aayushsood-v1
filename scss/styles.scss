@@ -705,7 +705,7 @@ button {
 
 @media (min-width: 1400px) {
   .container {
-    welcome {
+    .welcome {
       img {
         height: 300px;
         width: 300px;
@@ -727,9 +727,11 @@ button {
 
 @media (max-width: 1200px) {
   .container {
-    .inner-welcome {
-      width: 100%;
-      flex-direction: column;
+    .welcome {
+      .content {
+        width: 100%;
+        flex-direction: column;
+      }
     }
   }
 }
