@@ -34,7 +34,8 @@
   );
   --dark-color: #161e26;
   --border-color: #8892b0;
-  --cursor-color: rgba(255, 255, 255, 0.75);
+  --cursor-color: #10171e;
+  --cursor-blink-color: rgba(255, 255, 255, 0.8);
   --text-color: #fff;
   --header-text-color: #617bff;
   --tag-color: #64ffda;
@@ -198,9 +199,6 @@ button {
   text-decoration: none;
   border-bottom: 5px solid var(--border-color);
 }
-.container .welcome .content .intro-name {
-  border-bottom: 5px solid var(--border-color);
-}
 .container .welcome .content .fullstackContainer {
   display: inline-block;
   width: auto;
@@ -212,8 +210,7 @@ button {
 .container .welcome .content .intro-name {
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite;
-  border-bottom: 5px solid var(--border-color);
+  animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) 4;
   border-right: 2px solid var(--cursor-color);
 }
 @keyframes typewriter {
@@ -226,18 +223,17 @@ button {
 }
 @keyframes blinkTextCursor {
   from {
-    border-right-color: var(--gradient-bg);
+    border-right-color: var(--cursor-color);
   }
   to {
-    border-right-color: #fff;
+    border-right-color: var(--cursor-blink-color);
   }
 }
 .container .welcome .content .fullstack {
-  border-right: 2px solid var(--cursor-color);
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 2s steps(55) 3.5s 1 normal both, blinkTextCursor 1s steps(55) infinite;
-  border-bottom: 5px solid var(--border-color);
+  animation: typewriter 2s steps(55) 4s 1 normal both, blinkTextCursor 1s steps(55) 4 3.5s;
+  border-right: 2px solid var(--cursor-color);
 }
 @keyframes typewriter {
   from {
@@ -248,8 +244,11 @@ button {
   }
 }
 @keyframes blinkTextCursor {
-  50% {
-    border-right-color: var(--soft-color);
+  from {
+    border-right-color: var(--cursor-color);
+  }
+  to {
+    border-right-color: var(--cursor-blink-color);
   }
 }
 .container .welcome .content h1 {
@@ -513,19 +512,19 @@ button {
     height: 150px;
   }
 }
+@media (min-width: 150px) {
+  .welcome h1 {
+    font-size: 20px;
+  }
+}
 @media (min-width: 260px) {
   .welcome h1 {
     font-size: 20px;
   }
 }
-@media (min-width: 150px) {
+@media (min-width: 345px) {
   .welcome h1 {
-    font-size: 15px;
-  }
-}
-@media (min-width: 300px) {
-  .welcome h1 {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media (min-width: 460px) {
