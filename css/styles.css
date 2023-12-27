@@ -532,7 +532,7 @@ button {
       width: 0;
     }
     to {
-      width: 300px;
+      width: 250px;
     }
   }
   @keyframes blinkTextCursor {
@@ -557,7 +557,7 @@ button {
       width: 0;
     }
     to {
-      width: 445px;
+      width: 365px;
     }
   }
   @keyframes blinkTextCursor {
@@ -582,7 +582,7 @@ button {
       width: 0;
     }
     to {
-      width: 740px;
+      width: 635px;
     }
   }
   @keyframes blinkTextCursor {
@@ -607,8 +607,31 @@ button {
   }
 }
 @media (max-width: 1200px) {
+  .container .welcome .header .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
   .container .welcome .content {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 1150px) {
+  .container .welcome .header .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container .welcome .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
   }
 }
