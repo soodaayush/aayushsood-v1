@@ -217,11 +217,32 @@ button {
         border-bottom: 5px solid var(--border-color);
       }
 
+      .fullstackContainer {
+        display: inline-block;
+        width: auto;
+      }
+
       .fullstack {
         border-right: 2px solid var(--cursor-color);
-        width: 300px;
         white-space: nowrap;
         overflow: hidden;
+        animation: typewriter 2s steps(44) 1s 1 normal both,
+          blinkTextCursor 1s steps(44) infinite normal;
+        border-bottom: 5px solid var(--border-color);
+
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+        @keyframes blinkTextCursor {
+          50% {
+            border-right-color: transparent;
+          }
+        }
       }
 
       h1 {
@@ -553,29 +574,6 @@ button {
     h1 {
       font-size: 20px;
     }
-
-    .fullstack {
-      animation: typewriter 2s steps(44) 1s 1 normal both,
-        blinkTextCursor 1s steps(44) infinite normal;
-      border-bottom: 5px solid var(--border-color);
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-        to {
-          width: 285px;
-        }
-      }
-      @keyframes blinkTextCursor {
-        from {
-          border-right-color: var(--text-color);
-        }
-        to {
-          border-right-color: var(--dark-color);
-        }
-      }
-    }
   }
 }
 
@@ -583,29 +581,6 @@ button {
   .welcome {
     h1 {
       font-size: 15px;
-    }
-
-    .fullstack {
-      animation: typewriter 2s steps(44) 1s 1 normal both,
-        blinkTextCursor 1s steps(44) infinite normal;
-      border-bottom: 5px solid var(--border-color);
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-        to {
-          width: 230px;
-        }
-      }
-      @keyframes blinkTextCursor {
-        from {
-          border-right-color: var(--text-color);
-        }
-        to {
-          border-right-color: var(--dark-color);
-        }
-      }
     }
   }
 }
@@ -615,29 +590,6 @@ button {
     h1 {
       font-size: 20px;
     }
-
-    .fullstack {
-      animation: typewriter 2s steps(44) 1s 1 normal both,
-        blinkTextCursor 1s steps(44) infinite normal;
-      border-bottom: 5px solid var(--border-color);
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-        to {
-          width: 275px;
-        }
-      }
-      @keyframes blinkTextCursor {
-        from {
-          border-right-color: var(--text-color);
-        }
-        to {
-          border-right-color: var(--dark-color);
-        }
-      }
-    }
   }
 }
 
@@ -646,29 +598,6 @@ button {
     h1 {
       font-size: 30px;
     }
-
-    .fullstack {
-      animation: typewriter 2s steps(44) 1s 1 normal both,
-        blinkTextCursor 1s steps(44) infinite normal;
-      border-bottom: 5px solid var(--border-color);
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-        to {
-          width: 390px;
-        }
-      }
-      @keyframes blinkTextCursor {
-        from {
-          border-right-color: var(--text-color);
-        }
-        to {
-          border-right-color: var(--dark-color);
-        }
-      }
-    }
   }
 }
 
@@ -676,29 +605,6 @@ button {
   .welcome {
     h1 {
       font-size: 50px;
-    }
-
-    .fullstack {
-      animation: typewriter 2s steps(44) 1s 1 normal both,
-        blinkTextCursor 1s steps(44) infinite normal;
-      border-bottom: 5px solid var(--border-color);
-
-      @keyframes typewriter {
-        from {
-          width: 0;
-        }
-        to {
-          width: 645px;
-        }
-      }
-      @keyframes blinkTextCursor {
-        from {
-          border-right-color: var(--text-color);
-        }
-        to {
-          border-right-color: var(--dark-color);
-        }
-      }
     }
   }
 }
