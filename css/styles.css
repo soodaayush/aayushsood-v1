@@ -199,18 +199,44 @@ button {
   border-bottom: 5px solid var(--border-color);
 }
 .container .welcome .content .intro-name {
-  display: inline-block;
   border-bottom: 5px solid var(--border-color);
 }
 .container .welcome .content .fullstackContainer {
   display: inline-block;
   width: auto;
 }
+.container .welcome .content .introContainer {
+  display: inline-block;
+  width: auto;
+}
+.container .welcome .content .intro-name {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite;
+  border-bottom: 5px solid var(--border-color);
+  border-right: 2px solid var(--cursor-color);
+}
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: var(--gradient-bg);
+  }
+  to {
+    border-right-color: #fff;
+  }
+}
 .container .welcome .content .fullstack {
   border-right: 2px solid var(--cursor-color);
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) infinite normal;
+  animation: typewriter 2s steps(55) 3.5s 1 normal both, blinkTextCursor 1s steps(55) infinite;
   border-bottom: 5px solid var(--border-color);
 }
 @keyframes typewriter {
@@ -223,7 +249,7 @@ button {
 }
 @keyframes blinkTextCursor {
   50% {
-    border-right-color: transparent;
+    border-right-color: var(--soft-color);
   }
 }
 .container .welcome .content h1 {
