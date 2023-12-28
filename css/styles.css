@@ -184,7 +184,6 @@ button {
   align-items: center;
 }
 .container .welcome .header .content .header-name {
-  font-size: 1.5rem;
   color: var(--header-text-color);
 }
 .container .welcome .sidebar {
@@ -499,16 +498,16 @@ button {
   opacity: 0.75;
 }
 
-@media (min-width: 450px) {
-  .project {
-    width: 450px;
-    height: 625px;
-  }
-}
 @media (max-width: 450px) {
   .project {
     width: 300px;
     height: 650px;
+  }
+}
+@media (min-width: 450px) {
+  .project {
+    width: 450px;
+    height: 625px;
   }
 }
 @media (min-width: 500px) {
@@ -574,22 +573,32 @@ button {
     height: 150px;
   }
 }
+@media (max-width: 330px) {
+  .header .header-name {
+    font-size: 15px;
+  }
+}
+@media (min-width: 330px) {
+  .header .header-name {
+    font-size: 24px;
+  }
+}
 @media (min-width: 150px) {
   .welcome h1 {
     font-size: 15px;
   }
 }
-@media (min-width: 300px) {
+@media (min-width: 330px) {
   .welcome h1 {
     font-size: 20px;
   }
 }
-@media (min-width: 380px) {
+@media (min-width: 400px) {
   .welcome h1 {
     font-size: 25px;
   }
 }
-@media (min-width: 460px) {
+@media (min-width: 480px) {
   .welcome h1 {
     font-size: 30px;
   }
