@@ -170,6 +170,11 @@ button {
   align-items: center;
   width: 100%;
 }
+.container .welcome .header img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
 .container .welcome .header .content {
   padding: 40px 0 40px 0;
 }
@@ -178,14 +183,50 @@ button {
   justify-content: end;
   align-items: center;
 }
-.container .welcome .header .content .links img {
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-}
 .container .welcome .header .content .header-name {
   font-size: 1.5rem;
   color: var(--header-text-color);
+}
+.container .welcome .sidebar {
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 98;
+  background-color: var(--dark-color);
+}
+.container .welcome .sidebar .sidebar-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.container .welcome .sidebar .menuIcon {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.container .welcome .sidebar .links-sidebar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .welcome .sidebar .links-sidebar .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.container .welcome .sidebar .links-sidebar .link label {
+  font-size: 25px;
 }
 .container .welcome .content {
   display: flex;
@@ -471,6 +512,13 @@ button {
   }
 }
 @media (min-width: 500px) {
+  .header .links {
+    display: block;
+  }
+  .header .hamburger,
+  .header .sidebar {
+    display: none;
+  }
   .projects .project-container .project {
     display: flex;
     justify-content: center;
@@ -489,6 +537,17 @@ button {
   }
   .projects .project-container .promo-image {
     height: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .header .content .links {
+    display: none;
+  }
+  .header .content .links img {
+    display: none;
+  }
+  .header .content .links a {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 500px) {
@@ -586,14 +645,6 @@ button {
 @media (max-width: 400px) {
   .footer {
     flex-direction: column;
-  }
-}
-@media (max-width: 500px) {
-  .header .content .links {
-    flex-direction: column;
-  }
-  .header .content .links a {
-    margin-bottom: 10px;
   }
 }
 @media (min-width: 400px) {

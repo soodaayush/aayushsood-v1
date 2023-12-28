@@ -177,6 +177,12 @@ button {
       align-items: center;
       width: 100%;
 
+      img {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+      }
+
       .content {
         padding: 40px 0 40px 0;
 
@@ -184,17 +190,58 @@ button {
           display: flex;
           justify-content: end;
           align-items: center;
-
-          img {
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
-          }
         }
 
         .header-name {
           font-size: 1.5rem;
           color: var(--header-text-color);
+        }
+      }
+    }
+
+    .sidebar {
+      padding: 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      z-index: 98;
+      background-color: var(--dark-color);
+
+      .sidebar-container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .menuIcon {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .links-sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 15px;
+
+          label {
+            font-size: 25px;
+          }
         }
       }
     }
@@ -540,6 +587,17 @@ button {
 }
 
 @media (min-width: 500px) {
+  .header {
+    .links {
+      display: block;
+    }
+
+    .hamburger,
+    .sidebar {
+      display: none;
+    }
+  }
+
   .projects {
     .project-container {
       .project {
@@ -563,6 +621,24 @@ button {
 
       .promo-image {
         height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    .content {
+      .links {
+        display: none;
+
+        img {
+          display: none;
+        }
+
+        a {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -715,20 +791,6 @@ button {
 @media (max-width: 400px) {
   .footer {
     flex-direction: column;
-  }
-}
-
-@media (max-width: 500px) {
-  .header {
-    .content {
-      .links {
-        flex-direction: column;
-
-        a {
-          margin-bottom: 10px;
-        }
-      }
-    }
   }
 }
 
