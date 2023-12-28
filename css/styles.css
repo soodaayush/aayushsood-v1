@@ -549,6 +549,9 @@ button {
   .header .content .links a {
     margin-bottom: 10px;
   }
+  .header .sidebar {
+    display: none;
+  }
 }
 @media (max-width: 500px) {
   .projects .project-container .project {
