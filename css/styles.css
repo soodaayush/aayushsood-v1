@@ -522,7 +522,7 @@ button {
     font-size: 20px;
   }
 }
-@media (min-width: 345px) {
+@media (min-width: 360px) {
   .welcome h1 {
     font-size: 25px;
   }
