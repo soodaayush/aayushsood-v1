@@ -1,4 +1,37 @@
-:root {
+@font-face {
+  font-family: "Wotfard";
+  font-weight: 400;
+  src: url("../fonts/wotfard-regular-webfont.woff2") format("woff2"),
+    url("../fonts/wotfard-regular-webfont.ttf") format("ttf"),
+    url("../fonts/wotfard-regular-webfont.eot") format("eot");
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-size: 16px;
+  font-family: "Wotfard", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+body.dark {
   --soft-color: #0e141b;
   --gradient-bg: linear-gradient(
     180deg,
@@ -34,76 +67,56 @@
   );
   --dark-color: #161e26;
   --border-color: #8892b0;
-  --cursor-color: #10171e;
+  --cursor-color: transparent;
   --cursor-blink-color: rgba(255, 255, 255, 0.8);
   --text-color: #fff;
+  --link-text-color: #fff;
   --header-text-color: #617bff;
   --tag-color: #64ffda;
   --button-bg-color: rgba(45, 212, 191, 0.1);
   --link-bg-color: #0d1117;
-  --color-text: hsl(222deg, 22%, 5%);
-  --color-background: hsl(0deg, 0%, 100%);
-  --color-blurred-background: hsla(0deg, 0%, 100%, 0.85);
-  --color-primary: hsl(245deg, 100%, 60%);
-  --color-secondary: hsl(333deg, 100%, 45%);
-  --color-tertiary: hsl(255deg, 85%, 30%);
-  --color-decorative: hsl(200deg, 75%, 65%);
-  --color-muted: hsl(210deg, 55%, 92%);
-  --color-info: hsl(245deg, 100%, 60%);
-  --color-success: hsl(160deg, 100%, 40%);
-  --color-success-background: hsla(160deg, 100%, 40%, 0.1);
-  --color-error: hsl(340deg, 95%, 50%);
-  --color-error-background: hsla(340deg, 95%, 43%, 0.1);
-  --color-alert: hsl(37deg, 100%, 50%);
-  --color-alert-background: hsla(52deg, 100%, 50%, 0.25);
-  --color-subtle-background: hsl(225deg, 25%, 95%);
-  --color-subtle-floating: hsl(0deg, 0%, 100%);
-  --color-homepage-light: hsl(204deg, 67%, 85%);
-  --color-homepage-dark: hsl(202deg, 71%, 90%);
-  --color-homepage-bg: hsl(204deg, 67%, 85%);
-  --color-gray-100: hsl(225deg, 25%, 95%);
-  --color-gray-200: hsl(225deg, 16%, 90%);
-  --color-gray-300: hsl(225deg, 8%, 80%);
-  --color-gray-400: hsl(225deg, 8%, 70%);
-  --color-gray-500: hsl(225deg, 7%, 60%);
-  --color-gray-600: hsl(225deg, 15%, 50%);
-  --color-gray-700: hsl(225deg, 12%, 40%);
-  --color-gray-900: hsl(225deg, 25%, 20%);
-  --color-gray-1000: hsl(225deg, 15%, 15%);
-  --footer-bg-color: #1d2730;
 }
 
-@font-face {
-  font-family: "Wotfard";
-  font-weight: 400;
-  src: url("../fonts/wotfard-regular-webfont.woff2") format("woff2"),
-    url("../fonts/wotfard-regular-webfont.ttf") format("ttf"),
-    url("../fonts/wotfard-regular-webfont.eot") format("eot");
-  font-display: swap;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
-  font-size: 16px;
-  font-family: "Wotfard", sans-serif;
-}
-
-body {
-  margin: 0;
+body.light {
+  --soft-color: #fff;
+  --gradient-bg: linear-gradient(
+    180deg,
+    hsl(203deg 69% 89%) 0%,
+    hsl(203deg 69% 88%) 10%,
+    hsl(203deg 69% 88%) 20%,
+    hsl(203deg 69% 88%) 30%,
+    hsl(204deg 69% 88%) 40%,
+    hsl(204deg 69% 87%) 50%,
+    hsl(204deg 68% 87%) 60%,
+    hsl(204deg 68% 86%) 70%,
+    hsl(203deg 67% 86%) 80%,
+    hsl(203deg 66% 86%) 90%,
+    hsl(203deg 66% 85%) 100%
+  );
+  --footer-gradient-bg: linear-gradient(
+    180deg,
+    hsl(203deg 69% 89%) 0%,
+    hsl(203deg 69% 88%) 10%,
+    hsl(203deg 69% 88%) 20%,
+    hsl(203deg 69% 88%) 30%,
+    hsl(204deg 69% 88%) 40%,
+    hsl(204deg 69% 87%) 50%,
+    hsl(204deg 68% 87%) 60%,
+    hsl(204deg 68% 86%) 70%,
+    hsl(203deg 67% 86%) 80%,
+    hsl(203deg 66% 86%) 90%,
+    hsl(203deg 66% 85%) 100%
+  );
+  --dark-color: #c2e0f2;
+  --border-color: #8892b0;
+  --cursor-color: transparent;
+  --cursor-blink-color: #000;
+  --text-color: #000;
+  --link-text-color: #fff;
+  --header-text-color: #617bff;
+  --tag-color: #4433ff;
+  --button-bg-color: #cce9f8;
+  --link-bg-color: #0d1117;
 }
 
 a {
@@ -162,8 +175,7 @@ button {
   }
 
   .welcome {
-    background-image: var(--gradient-bg);
-    background-size: 100% 100%;
+    background: var(--gradient-bg);
     width: 100%;
     padding: 20px;
     display: flex;
@@ -177,10 +189,12 @@ button {
       align-items: center;
       width: 100%;
 
-      img {
+      img,
+      svg {
         width: 40px;
         height: 40px;
         margin-left: 10px;
+        cursor: pointer;
       }
 
       .content {
@@ -190,6 +204,10 @@ button {
           display: flex;
           justify-content: end;
           align-items: center;
+
+          svg {
+            fill: var(--text-color);
+          }
         }
 
         .header-name {
@@ -470,7 +488,7 @@ button {
 
         button {
           background: var(--link-bg-color);
-          color: var(--text-color);
+          color: var(--link-text-color);
         }
 
         .promo-image {
