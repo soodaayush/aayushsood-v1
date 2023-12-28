@@ -514,15 +514,15 @@ button {
 }
 @media (min-width: 150px) {
   .welcome h1 {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
-@media (min-width: 260px) {
+@media (min-width: 300px) {
   .welcome h1 {
     font-size: 20px;
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 380px) {
   .welcome h1 {
     font-size: 25px;
   }
