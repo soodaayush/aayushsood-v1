@@ -403,6 +403,7 @@ button {
       .heading {
         text-align: center;
         width: 100%;
+        margin-bottom: 20px;
       }
 
       .technical-skills-container {
@@ -448,7 +449,6 @@ button {
 
     .heading {
       width: 100%;
-
       text-align: center;
     }
 
@@ -567,6 +567,7 @@ button {
     .heading {
       width: 100%;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     .interests-container {
@@ -919,7 +920,7 @@ button {
   }
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 1895px) {
   .content {
     width: 90%;
   }
@@ -939,19 +940,19 @@ button {
   }
 }
 
-@media (min-width: 2750px) {
+@media (min-width: 2700px) {
   .content {
     width: 60%;
   }
 }
 
-@media (min-width: 3350px) {
+@media (min-width: 3150px) {
   .content {
     width: 50%;
   }
 }
 
-@media (min-width: 4000px) {
+@media (min-width: 3770px) {
   .content {
     width: 40%;
   }
