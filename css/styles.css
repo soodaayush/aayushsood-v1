@@ -475,10 +475,10 @@ button {
   margin-bottom: 20px;
   color: var(--text-color);
 }
-.container .interests .interests-container .interest a {
+.container .interests .interests-container .interest h1 {
   transition: 0.15s ease-in-out;
 }
-.container .interests .interests-container .interest a:hover {
+.container .interests .interests-container .interest h1:hover {
   color: var(--tag-color);
 }
 .container .interests .interests-container h1 {
