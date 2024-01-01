@@ -49,6 +49,7 @@ body.dark {
     hsl(212deg 29% 11%) 92%,
     hsl(212deg 29% 12%) 100%
   );
+  --github-color: #fff;
   --dark-color: #161e26;
   --border-color: #8892b0;
   --cursor-color: transparent;
@@ -77,6 +78,7 @@ body.light {
     hsl(203deg 66% 86%) 90%,
     hsl(203deg 66% 85%) 100%
   );
+  --github-color: #fff;
   --dark-color: #c2e0f2;
   --border-color: #8892b0;
   --cursor-color: transparent;
@@ -491,6 +493,7 @@ button {
           height: 30px;
           width: 30px;
           margin-right: 10px;
+          fill: var(--github-color);
         }
 
         .links {
