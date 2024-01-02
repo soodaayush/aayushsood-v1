@@ -417,13 +417,20 @@ button {
         flex-wrap: wrap;
 
         div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          cursor: default;
           width: 300px;
           margin-bottom: 20px;
 
           h1 {
             transition: 0.15s ease-in-out;
+          }
 
-            &:hover {
+          &:hover {
+            h1 {
               color: var(--tag-color);
             }
           }
@@ -585,6 +592,7 @@ button {
         width: 300px;
         margin-bottom: 20px;
         color: var(--text-color);
+        cursor: default;
 
         h1 {
           transition: 0.15s ease-in-out;
