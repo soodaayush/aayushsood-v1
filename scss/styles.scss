@@ -121,6 +121,10 @@ button {
   font-family: "Wotfard", sans-serif;
 }
 
+body {
+  background: var(--dark-color);
+}
+
 .container {
   display: flex;
   align-items: center;
