@@ -419,6 +419,7 @@ body {
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
+        gap: 100px;
 
         .column {
           display: flex;
@@ -427,6 +428,7 @@ body {
           height: 725px;
           flex-direction: column;
           padding: 20px;
+          width: 245px;
           border-radius: 20px;
 
           h1 {
@@ -449,7 +451,6 @@ body {
             align-items: center;
             flex-direction: column;
             cursor: default;
-            width: 300px;
             margin-bottom: 20px;
 
             h1 {
