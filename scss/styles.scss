@@ -421,7 +421,6 @@ body {
           display: flex;
           justify-content: start;
           align-items: center;
-          height: 725px;
           flex-direction: column;
           padding: 20px;
           width: 245px;
@@ -680,6 +679,10 @@ body {
   .container {
     .technical-skills-container {
       grid-template-columns: 1fr;
+
+      .column {
+        height: auto;
+      }
     }
   }
 }
