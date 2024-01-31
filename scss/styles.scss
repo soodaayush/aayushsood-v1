@@ -414,12 +414,8 @@ body {
 
       .technical-skills-container {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-wrap: wrap;
-        gap: 100px;
+        display: grid;
+        justify-items: center;
 
         .column {
           display: flex;
@@ -660,6 +656,30 @@ body {
       &:hover {
         opacity: 0.75;
       }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    .technical-skills-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    .technical-skills-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    .technical-skills-container {
+      grid-template-columns: 1fr;
     }
   }
 }
