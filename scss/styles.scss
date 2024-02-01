@@ -60,6 +60,7 @@ body.dark {
   --tag-color: #64ffda;
   --button-bg-color: rgba(45, 212, 191, 0.1);
   --link-bg-color: #0d1117;
+  --header-color: hsl(333deg, 100%, 52%);
 }
 
 body.light {
@@ -89,6 +90,7 @@ body.light {
   --tag-color: #4433ff;
   --button-bg-color: #cce9f8;
   --link-bg-color: #0d1117;
+  --header-color: hsl(333deg, 100%, 52%);
 }
 
 a {
@@ -426,6 +428,10 @@ body {
           width: 245px;
           border-radius: 20px;
 
+          .stack {
+            color: var(--header-text-color);
+          }
+
           h1 {
             font-size: 30px;
             margin-bottom: 20px;
@@ -434,10 +440,6 @@ body {
           &:hover {
             box-shadow: var(--border-color) 0px 5px 15px;
             transition: box-shadow 0.3s ease-in-out;
-
-            .stack {
-              color: var(--tag-color);
-            }
           }
 
           div {
@@ -501,16 +503,13 @@ body {
 
         h1 {
           transition: 0.15s ease-in-out;
+          color: var(--header-text-color);
           font-size: 30px;
         }
 
         &:hover {
           box-shadow: var(--border-color) 0px 5px 15px;
           transition: box-shadow 0.3s ease-in-out;
-
-          h1 {
-            color: var(--tag-color);
-          }
         }
 
         .promo-image {
@@ -698,6 +697,12 @@ body {
   .project {
     width: 450px;
     height: 540px;
+  }
+}
+
+@media (max-width: 940px) {
+  .project {
+    height: auto;
   }
 }
 
