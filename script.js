@@ -11,6 +11,10 @@ const sunMenu = document.getElementById("sunMenu");
 const moon = document.getElementById("moon");
 const moonMenu = document.getElementById("moonMenu");
 
+const imageGalleryModal = document.getElementById("imageGalleryModal");
+const imageGalleryTrigger = document.getElementById("imageGalleryTrigger");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
 hamburgerIcon.addEventListener("click", summonBurgerMenu);
 menuIcon.addEventListener("click", closeMenu);
 
@@ -19,11 +23,23 @@ moon.addEventListener("click", toggleDarkMode);
 sunMenu.addEventListener("click", toggleLightModeMenu);
 moonMenu.addEventListener("click", toggleDarkModeMenu);
 
+imageGalleryTrigger.addEventListener("click", triggerImageGalleryModal);
+closeModalBtn.addEventListener("click", closeImageGalleryModal);
+
+function triggerImageGalleryModal() {
+  imageGalleryModal.style.display = "block";
+}
+
+function closeImageGalleryModal() {
+  imageGalleryModal.style.display = "none";
+}
+
 function summonBurgerMenu() {
   sidebar.style.display = "block";
 }
 
 function closeMenu() {
+  sidebar.style.animation = "fadeOut";
   sidebar.style.display = "none";
 }
 

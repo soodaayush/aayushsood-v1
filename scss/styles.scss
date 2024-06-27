@@ -1,6 +1,6 @@
-@import "./global.scss";
-@import "./header.scss";
-@import "./footer.scss";
+@use "global";
+@use "header";
+@use "footer";
 
 .container {
   display: flex;
@@ -9,10 +9,65 @@
   color: var(--text-color);
   background: var(--dark-color);
 
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Full width */
+    height: 70%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding: 20px;
+    box-shadow: var(--border-color) 0px 5px 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 20px;
+    animation: fadeIn;
+    animation-duration: 0.4s;
+    background: var(--dark-color);
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    img {
+      height: 200px;
+      width: 200px;
+      margin: 0 20px 20px 0;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .images {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .curve {
@@ -128,6 +183,9 @@
     background: var(--soft-color);
 
     .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
 
       .heading {
@@ -199,6 +257,9 @@
     background: var(--soft-color);
 
     .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
     }
 
@@ -314,6 +375,9 @@
     background: var(--soft-color);
 
     .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
     }
 
@@ -569,12 +633,6 @@
 }
 
 @media (max-width: 1300px) {
-  .content {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1300px) {
   .content {
     width: 100%;
   }
