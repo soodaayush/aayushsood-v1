@@ -16,7 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%; /* Full width */
-    height: 70%; /* Full height */
+    height: 80%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     padding: 20px;
     box-shadow: var(--border-color) 0px 5px 15px;
@@ -25,6 +25,14 @@
     animation: fadeIn;
     animation-duration: 0.4s;
     background: var(--dark-color);
+
+    .closeModal {
+      &:active {
+        .modal {
+          animation: fadeOut;
+        }
+      }
+    }
 
     @keyframes fadeIn {
       from {
@@ -44,12 +52,6 @@
       }
     }
 
-    img {
-      height: 200px;
-      width: 200px;
-      margin: 0 20px 20px 0;
-    }
-
     svg {
       cursor: pointer;
     }
@@ -67,6 +69,11 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+
+      .image {
+        text-align: center;
+        width: 205px;
+      }
     }
   }
 
@@ -445,10 +452,37 @@
   }
 }
 
+@media (max-width: 735px) {
+  .modal {
+    .image {
+      margin: 0 0 20px 0;
+      border: 1px solid red;
+
+      height: 250px;
+    }
+  }
+}
+
+@media (min-width: 735px) {
+  .modal {
+    .image {
+      height: 230px;
+      margin: 0 20px 20px 20px;
+    }
+  }
+}
+
 @media (max-width: 450px) {
   .project {
     width: 300px;
     height: 600px;
+  }
+
+  .modal {
+    img {
+      height: 150px;
+      width: 150px;
+    }
   }
 }
 
@@ -456,6 +490,13 @@
   .project {
     width: 450px;
     height: 540px;
+  }
+
+  .modal {
+    img {
+      height: 200px;
+      width: 200px;
+    }
   }
 }
 
