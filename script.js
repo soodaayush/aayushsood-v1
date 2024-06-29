@@ -39,7 +39,6 @@ function summonBurgerMenu() {
 }
 
 function closeMenu() {
-  sidebar.style.animation = "fadeOut";
   sidebar.style.display = "none";
 }
 
