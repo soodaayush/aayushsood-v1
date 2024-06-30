@@ -27,11 +27,17 @@ imageGalleryTrigger.addEventListener("click", triggerImageGalleryModal);
 closeModalBtn.addEventListener("click", closeImageGalleryModal);
 
 function triggerImageGalleryModal() {
+  imageGalleryModal.style.animation = "fadeIn 0.4s";
   imageGalleryModal.style.display = "block";
 }
 
 function closeImageGalleryModal() {
-  imageGalleryModal.style.display = "none";
+  imageGalleryModal.style.animation = "fadeOut 0.4s";
+
+  imageGalleryModal.addEventListener("animationend", function handler() {
+    imageGalleryModal.style.display = "none";
+    imageGalleryModal.removeEventListener("animationend", handler);
+  });
 }
 
 function summonBurgerMenu() {
