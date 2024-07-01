@@ -27,13 +27,13 @@
 }
 
 @media (max-width: 400px) {
-  .footer {
+  .content {
     flex-direction: column;
   }
 }
 
 @media (min-width: 400px) {
-  .footer {
+  .content {
     flex-direction: row;
   }
 }
