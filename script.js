@@ -11,6 +11,11 @@ const sunMenu = document.getElementById("sunMenu");
 const moon = document.getElementById("moon");
 const moonMenu = document.getElementById("moonMenu");
 
+const imageGalleryModal = document.getElementById("imageGalleryModal");
+const imageGalleryTrigger = document.getElementById("imageGalleryTrigger");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const iframes = document.querySelectorAll("iframe");
+
 hamburgerIcon.addEventListener("click", summonBurgerMenu);
 menuIcon.addEventListener("click", closeMenu);
 
@@ -18,6 +23,30 @@ sun.addEventListener("click", toggleLightMode);
 moon.addEventListener("click", toggleDarkMode);
 sunMenu.addEventListener("click", toggleLightModeMenu);
 moonMenu.addEventListener("click", toggleDarkModeMenu);
+
+imageGalleryTrigger.addEventListener("click", triggerImageGalleryModal);
+closeModalBtn.addEventListener("click", closeImageGalleryModal);
+
+function triggerImageGalleryModal() {
+  imageGalleryModal.style.animation = "fadeIn 0.4s";
+  imageGalleryModal.style.display = "block";
+  body.style.overflow = "hidden";
+}
+
+function closeImageGalleryModal() {
+  imageGalleryModal.style.animation = "fadeOut 0.4s";
+
+  imageGalleryModal.addEventListener("animationend", function handler() {
+    body.style.overflow = "scroll";
+    imageGalleryModal.style.display = "none";
+    imageGalleryModal.removeEventListener("animationend", handler);
+
+    iframes.forEach((iframe) => {
+      var iframeSrc = iframe.src;
+      iframe.src = iframeSrc;
+    });
+  });
+}
 
 function summonBurgerMenu() {
   sidebar.style.display = "block";
