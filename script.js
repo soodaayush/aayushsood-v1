@@ -30,12 +30,14 @@ closeModalBtn.addEventListener("click", closeImageGalleryModal);
 function triggerImageGalleryModal() {
   imageGalleryModal.style.animation = "fadeIn 0.4s";
   imageGalleryModal.style.display = "block";
+  body.style.overflow = "hidden";
 }
 
 function closeImageGalleryModal() {
   imageGalleryModal.style.animation = "fadeOut 0.4s";
 
   imageGalleryModal.addEventListener("animationend", function handler() {
+    body.style.overflow = "scroll";
     imageGalleryModal.style.display = "none";
     imageGalleryModal.removeEventListener("animationend", handler);
 
