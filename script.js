@@ -14,6 +14,7 @@ const moonMenu = document.getElementById("moonMenu");
 const imageGalleryModal = document.getElementById("imageGalleryModal");
 const imageGalleryTrigger = document.getElementById("imageGalleryTrigger");
 const closeModalBtn = document.getElementById("closeModalBtn");
+const iframes = document.querySelectorAll("iframe");
 
 hamburgerIcon.addEventListener("click", summonBurgerMenu);
 menuIcon.addEventListener("click", closeMenu);
@@ -37,6 +38,11 @@ function closeImageGalleryModal() {
   imageGalleryModal.addEventListener("animationend", function handler() {
     imageGalleryModal.style.display = "none";
     imageGalleryModal.removeEventListener("animationend", handler);
+
+    iframes.forEach((iframe) => {
+      var iframeSrc = iframe.src;
+      iframe.src = iframeSrc;
+    });
   });
 }
 
