@@ -12,6 +12,7 @@ const moon = document.getElementById("moon");
 const moonMenu = document.getElementById("moonMenu");
 
 const imageGalleryModal = document.getElementById("imageGalleryModal");
+const modalContent = document.querySelector(".modal-content");
 const imageGalleryTrigger = document.getElementById("imageGalleryTrigger");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const iframes = document.querySelectorAll("iframe");
@@ -26,6 +27,21 @@ moonMenu.addEventListener("click", toggleDarkModeMenu);
 
 imageGalleryTrigger.addEventListener("click", triggerImageGalleryModal);
 closeModalBtn.addEventListener("click", closeImageGalleryModal);
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" || event.key === "Esc") {
+    closeImageGalleryModal();
+  }
+});
+
+document.addEventListener("click", function (e) {
+  if (
+    !imageGalleryModal.contains(e.target) &&
+    e.target !== imageGalleryTrigger
+  ) {
+    closeImageGalleryModal();
+  }
+});
 
 function triggerImageGalleryModal() {
   imageGalleryModal.style.animation = "fadeIn 0.4s";
