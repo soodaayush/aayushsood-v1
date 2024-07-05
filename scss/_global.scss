@@ -49,6 +49,8 @@ body.dark {
     hsl(212deg 29% 11%) 92%,
     hsl(212deg 29% 12%) 100%
   );
+  --modal-bg-color: #1e2a35;
+  --modal-image-border-color: #fff;
   --github-color: #fff;
   --dark-color: #161e26;
   --border-color: #8892b0;
@@ -59,7 +61,7 @@ body.dark {
   --header-text-color: #617bff;
   --tag-color: #64ffda;
   --button-bg-color: rgba(45, 212, 191, 0.1);
-  --link-bg-color: #0d1117;
+  --link-bg-color: #1e2a35;
   --header-color: hsl(333deg, 100%, 52%);
 }
 
@@ -79,6 +81,8 @@ body.light {
     hsl(203deg 66% 86%) 90%,
     hsl(203deg 66% 85%) 100%
   );
+  --modal-bg-color: #c2e0f2;
+  --modal-image-border-color: #6e04f9;
   --github-color: #fff;
   --dark-color: #c2e0f2;
   --border-color: #8892b0;

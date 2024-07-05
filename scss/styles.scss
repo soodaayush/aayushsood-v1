@@ -22,7 +22,7 @@
     box-shadow: var(--border-color) 0px 5px 15px;
     animation: fadeIn 0.4s;
     border-radius: 20px;
-    background: var(--dark-color);
+    background: var(--modal-bg-color);
 
     @keyframes fadeIn {
       from {
@@ -52,10 +52,14 @@
       align-items: center;
       margin-bottom: 20px;
       position: sticky;
-      background: var(--dark-color);
+      background: var(--modal-bg-color);
       top: 0;
       z-index: 100;
       padding: 20px;
+
+      svg {
+        fill: var(--text-color);
+      }
     }
 
     .images {
@@ -63,7 +67,7 @@
       width: 100%;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
 
       .image {
         display: flex;
@@ -76,11 +80,16 @@
 
         img {
           transition: 0.3s ease-in-out;
+          border: 2px solid var(--modal-image-border-color);
 
           &:hover {
             opacity: 0.5;
             transition: 0.3s ease-in-out;
           }
+        }
+
+        iframe {
+          border: 2px solid var(--modal-image-border-color);
         }
       }
     }
