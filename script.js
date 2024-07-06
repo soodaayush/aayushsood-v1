@@ -35,11 +35,14 @@ document.addEventListener("keydown", function (event) {
 });
 
 document.addEventListener("click", function (e) {
-  if (
-    !imageGalleryModal.contains(e.target) &&
-    e.target !== imageGalleryTrigger
-  ) {
-    closeImageGalleryModal();
+  if (imageGalleryModal.style.display === "block") {
+    if (
+      !imageGalleryModal.contains(e.target) &&
+      e.target !== imageGalleryTrigger
+    ) {
+      console.log(imageGalleryModal);
+      closeImageGalleryModal();
+    }
   }
 });
 
