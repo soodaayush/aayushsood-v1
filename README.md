@@ -1,6 +1,6 @@
 # Portfolio Website  
 
-![aayushsood](https://github.com/user-attachments/assets/5f9d5c9f-e3a5-4455-91e9-31ac3de6e11c)
+![aayushsood](https://github.com/user-attachments/assets/197124e0-7719-4f00-a7a2-f5cb7c270e6a)
 
 ## Inspiration
 
