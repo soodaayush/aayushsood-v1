@@ -68,6 +68,7 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
+      gap: 40px;
 
       .image {
         display: flex;
@@ -471,22 +472,6 @@
   }
 }
 
-@media (max-width: 735px) {
-  .modal {
-    .image {
-      margin: 0 0 20px 0;
-    }
-  }
-}
-
-@media (min-width: 735px) {
-  .modal {
-    .image {
-      margin: 0 20px 20px 20px;
-    }
-  }
-}
-
 @media (max-width: 450px) {
   .project {
     width: 300px;
@@ -512,7 +497,7 @@
     img,
     iframe {
       height: 200px;
-      width: 200px;
+      width: 220px;
     }
   }
 }
