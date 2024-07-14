@@ -10,6 +10,10 @@ I have thought of making a portfolio website for a long time, and now I have fin
 
 Thinking of an easy to browse layout that can be accessible on all devices, including mobile.
 
+## Lessons Learned
+
+I learned to be proud of your creations.
+
 ## The Website
 
 This is my portfolio website! This is where you can find my Résumé, Technical Skills, Projects, and Interests.
