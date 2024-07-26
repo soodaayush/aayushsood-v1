@@ -82,10 +82,10 @@ function initialize() {
     body.classList.remove("light");
     body.classList.add("dark");
 
-    sun.style.display = "block";
-    sunMenu.style.display = "block";
     moon.style.display = "none";
     moonMenu.style.display = "none";
+    sun.style.display = "block";
+    sunMenu.style.display = "block";
   }
 
   if (localStorage.getItem("theme") === "light") {
@@ -102,10 +102,10 @@ function initialize() {
     body.classList.remove("light");
     body.classList.add("dark");
 
-    sun.style.display = "block";
-    sunMenu.style.display = "block";
     moon.style.display = "none";
     moonMenu.style.display = "none";
+    sun.style.display = "block";
+    sunMenu.style.display = "block";
   }
 }
 
@@ -145,10 +145,10 @@ function toggleDarkModeMenu() {
   body.classList.remove("light");
   body.classList.add("dark");
 
-  sunMenu.style.display = "block";
-  sun.style.display = "block";
   moonMenu.style.display = "none";
   moon.style.display = "none";
+  sunMenu.style.display = "block";
+  sun.style.display = "block";
 }
 
 function toggleDarkMode() {
@@ -157,6 +157,6 @@ function toggleDarkMode() {
   body.classList.remove("light");
   body.classList.add("dark");
 
-  sun.style.display = "block";
   moon.style.display = "none";
+  sun.style.display = "block";
 }
