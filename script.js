@@ -11,10 +11,14 @@ const sunMenu = document.getElementById("sunMenu");
 const moon = document.getElementById("moon");
 const moonMenu = document.getElementById("moonMenu");
 
-const imageGalleryModal = document.getElementById("imageGalleryModal");
-const modalContent = document.querySelector(".modal-content");
-const imageGalleryTrigger = document.getElementById("imageGalleryTrigger");
-const closeModalBtn = document.getElementById("closeModalBtn");
+const cpuModal = document.getElementById("6502Modal");
+const cpuModalTrigger = document.getElementById("6502ModalTrigger");
+const closeCPUModalBtn = document.getElementById("closeCPUModalBtn");
+
+const eightBitModal = document.getElementById("8BitModal");
+const eightBitModalTrigger = document.getElementById("8BitModalTrigger");
+const closeEightBitModalBtn = document.getElementById("close8BitModalBtn");
+
 const iframes = document.querySelectorAll("iframe");
 
 hamburgerIcon.addEventListener("click", summonBurgerMenu);
@@ -25,40 +29,77 @@ moon.addEventListener("click", toggleDarkMode);
 sunMenu.addEventListener("click", toggleLightModeMenu);
 moonMenu.addEventListener("click", toggleDarkModeMenu);
 
-imageGalleryTrigger.addEventListener("click", triggerImageGalleryModal);
-closeModalBtn.addEventListener("click", closeImageGalleryModal);
+cpuModalTrigger.addEventListener("click", triggerCPUModal);
+closeCPUModalBtn.addEventListener("click", closeCPUModal);
+
+eightBitModalTrigger.addEventListener("click", triggerEightBitModal);
+closeEightBitModalBtn.addEventListener("click", closeEightBitModal);
 
 document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" || event.key === "Esc") {
-    closeImageGalleryModal();
+  if (cpuModal.style.display === "block") {
+    if (event.key === "Escape" || event.key === "Esc") {
+      closeCPUModal();
+    }
   }
-});
 
-document.addEventListener("click", function (e) {
-  if (imageGalleryModal.style.display === "block") {
-    if (
-      !imageGalleryModal.contains(e.target) &&
-      e.target !== imageGalleryTrigger
-    ) {
-      console.log(imageGalleryModal);
-      closeImageGalleryModal();
+  if (eightBitModal.style.display === "block") {
+    if (event.key === "Escape" || event.key === "Esc") {
+      closeEightBitModal();
     }
   }
 });
 
-function triggerImageGalleryModal() {
-  imageGalleryModal.style.animation = "fadeIn 0.4s";
-  imageGalleryModal.style.display = "block";
+document.addEventListener("click", function (e) {
+  if (cpuModal.style.display === "block") {
+    if (!cpuModal.contains(e.target) && e.target !== cpuModalTrigger) {
+      closeCPUModal();
+    }
+  }
+
+  if (eightBitModal.style.display === "block") {
+    if (
+      !eightBitModal.contains(e.target) &&
+      e.target !== eightBitModalTrigger
+    ) {
+      closeEightBitModal();
+    }
+  }
+});
+
+function triggerCPUModal() {
+  cpuModal.style.animation = "fadeIn 0.4s";
+  cpuModal.style.display = "block";
   body.style.overflow = "hidden";
 }
 
-function closeImageGalleryModal() {
-  imageGalleryModal.style.animation = "fadeOut 0.4s";
+function closeCPUModal() {
+  cpuModal.style.animation = "fadeOut 0.4s";
 
-  imageGalleryModal.addEventListener("animationend", function handler() {
+  cpuModal.addEventListener("animationend", function handler() {
     body.style.overflow = "scroll";
-    imageGalleryModal.style.display = "none";
-    imageGalleryModal.removeEventListener("animationend", handler);
+    cpuModal.style.display = "none";
+    cpuModal.removeEventListener("animationend", handler);
+
+    iframes.forEach((iframe) => {
+      var iframeSrc = iframe.src;
+      iframe.src = iframeSrc;
+    });
+  });
+}
+
+function triggerEightBitModal() {
+  eightBitModal.style.animation = "fadeIn 0.4s";
+  eightBitModal.style.display = "block";
+  body.style.overflow = "hidden";
+}
+
+function closeEightBitModal() {
+  eightBitModal.style.animation = "fadeOut 0.4s";
+
+  eightBitModal.addEventListener("animationend", function handler() {
+    body.style.overflow = "scroll";
+    eightBitModal.style.display = "none";
+    eightBitModal.removeEventListener("animationend", handler);
 
     iframes.forEach((iframe) => {
       var iframeSrc = iframe.src;
