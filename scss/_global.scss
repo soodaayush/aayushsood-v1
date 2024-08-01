@@ -22,6 +22,9 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   line-height: 1.6;
   font-size: 16px;
   font-family: "Wotfard", sans-serif;
@@ -29,6 +32,7 @@ html {
 
 body {
   margin: 0;
+  font-variant-ligatures: none;
 }
 
 body.dark {
