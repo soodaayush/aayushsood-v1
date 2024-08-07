@@ -4,11 +4,11 @@
 
 ## Inspiration
 
-I have thought of making a portfolio website for a long time, and now I have finally managed to make one.
+I have wanted to create a portfolio website for a long time, and I finally managed to do it.
 
 ## Challenges
 
-Thinking of an easy to browse layout that can be accessible on all devices, including mobile.
+Designing an easy-to-browse layout that is accessible on all devices, including mobile.
 
 ## Lessons Learned
 
@@ -16,4 +16,4 @@ I learned to be proud of your creations.
 
 ## The Website
 
-This is my portfolio website! This is where you can find my Résumé, Technical Skills, Projects, and Interests.
+This is my portfolio website! Here, you can find my résumé, technical skills, projects, and interests.
