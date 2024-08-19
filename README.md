@@ -4,11 +4,11 @@
 
 ## Inspiration
 
-I have wanted to create a portfolio website for a long time, and I finally managed to do it.
+I have wanted to create a portfolio website for myself for a long time, and I finally managed to do it.
 
 ## Challenges
 
-Designing an easy-to-browse layout that is accessible on all devices, including mobile.
+Designing an eye-catching easy-to-browse layout that is accessible on all devices, including mobile.
 
 ## Lessons Learned
 
