@@ -26,13 +26,16 @@
   }
 }
 
-@media (max-width: 400px) {
-  .content {
-    flex-direction: column;
+@media (max-width: 500px) {
+  .footer {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .content {
     flex-direction: row;
   }
