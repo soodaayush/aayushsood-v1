@@ -35,6 +35,16 @@ closeCPUModalBtn.addEventListener("click", closeCPUModal);
 eightBitModalTrigger.addEventListener("click", triggerEightBitModal);
 closeEightBitModalBtn.addEventListener("click", closeEightBitModal);
 
+const currentPath = window.location.pathname;
+
+const basePath = "/specific-page";
+
+const homePageUrl = "/";
+
+if (currentPath.startsWith(basePath)) {
+  window.location.href = homePageUrl;
+}
+
 document.addEventListener("keydown", function (event) {
   if (cpuModal.style.display === "block") {
     if (event.key === "Escape" || event.key === "Esc") {
