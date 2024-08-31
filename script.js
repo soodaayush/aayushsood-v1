@@ -22,12 +22,12 @@ const closeEightBitModalBtn = document.getElementById("close8BitModalBtn");
 const iframes = document.querySelectorAll("iframe");
 
 hamburgerIcon.addEventListener("click", summonBurgerMenu);
-menuIcon.addEventListener("click", closeMenu);
+menuIcon.addEventListener("click", closeBurgerMenu);
 
-sun.addEventListener("click", toggleLightMode);
-moon.addEventListener("click", toggleDarkMode);
-sunMenu.addEventListener("click", toggleLightModeMenu);
-moonMenu.addEventListener("click", toggleDarkModeMenu);
+sun.addEventListener("click", switchToLightMode);
+moon.addEventListener("click", switchToDarkMode);
+sunMenu.addEventListener("click", switchToLightMode);
+moonMenu.addEventListener("click", switchToDarkMode);
 
 cpuModalTrigger.addEventListener("click", triggerCPUModal);
 closeCPUModalBtn.addEventListener("click", closeCPUModal);
@@ -65,6 +65,37 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+function initialize() {
+  let theme = localStorage.getItem("theme");
+
+  if (!theme) {
+    theme = "dark";
+    localStorage.setItem("theme", theme);
+  }
+
+  if (theme === "light") {
+    body.classList.remove("dark");
+    body.classList.add("light");
+
+    moon.style.display = "block";
+    sun.style.display = "none";
+    sun.style.display = "none";
+    sunMenu.style.display = "none";
+    moon.style.display = "block";
+    moonMenu.style.display = "block";
+  } else if (theme === "dark") {
+    body.classList.remove("light");
+    body.classList.add("dark");
+
+    sun.style.display = "block";
+    moon.style.display = "none";
+    moon.style.display = "none";
+    moonMenu.style.display = "none";
+    sun.style.display = "block";
+    sunMenu.style.display = "block";
+  }
+}
 
 function triggerCPUModal() {
   cpuModal.style.animation = "fadeIn 0.4s";
@@ -112,85 +143,30 @@ function summonBurgerMenu() {
   sidebar.style.display = "block";
 }
 
-function closeMenu() {
+function closeBurgerMenu() {
   sidebar.style.display = "none";
 }
 
-function initialize() {
-  let theme = localStorage.getItem("theme");
-
-  if (!theme) {
-    theme = "dark";
-    localStorage.setItem("theme", theme);
-  }
-
-  if (theme === "light") {
-    body.classList.remove("dark");
-    body.classList.add("light");
-
-    sun.style.display = "none";
-    sunMenu.style.display = "none";
-    moon.style.display = "block";
-    moonMenu.style.display = "block";
-  } else if (theme === "dark") {
-    body.classList.remove("light");
-    body.classList.add("dark");
-
-    moon.style.display = "none";
-    moonMenu.style.display = "none";
-    sun.style.display = "block";
-    sunMenu.style.display = "block";
-  }
-}
-
-if (body.className === "light") {
-  sun.style.display = "none";
-}
-
-if (body.className === "dark") {
-  moon.style.display = "none";
-}
-
-function toggleLightMode() {
-  localStorage.setItem("theme", "light");
-
-  body.classList.remove("dark");
-  body.classList.add("light");
-
-  sun.style.display = "none";
-  moon.style.display = "block";
-}
-
-function toggleLightModeMenu() {
-  localStorage.setItem("theme", "light");
-
-  body.classList.remove("dark");
-  body.classList.add("light");
-
-  sunMenu.style.display = "none";
-  sun.style.display = "none";
-  moonMenu.style.display = "block";
-  moon.style.display = "block";
-}
-
-function toggleDarkModeMenu() {
+function switchToDarkMode() {
   localStorage.setItem("theme", "dark");
 
   body.classList.remove("light");
   body.classList.add("dark");
 
+  moon.style.display = "none";
   moonMenu.style.display = "none";
-  moon.style.display = "none";
-  sunMenu.style.display = "block";
   sun.style.display = "block";
+  sunMenu.style.display = "block";
 }
 
-function toggleDarkMode() {
-  localStorage.setItem("theme", "dark");
+function switchToLightMode() {
+  localStorage.setItem("theme", "light");
 
-  body.classList.remove("light");
-  body.classList.add("dark");
+  body.classList.remove("dark");
+  body.classList.add("light");
 
-  moon.style.display = "none";
-  sun.style.display = "block";
+  sun.style.display = "none";
+  sunMenu.style.display = "none";
+  moon.style.display = "block";
+  moonMenu.style.display = "block";
 }
