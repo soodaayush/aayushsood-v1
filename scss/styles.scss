@@ -123,6 +123,7 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 40px;
+      border: 1px solid red;
 
       .picture {
         border-radius: 50%;
@@ -572,6 +573,10 @@
     h1 {
       font-size: 15px;
     }
+
+    p {
+      font-size: 12px;
+    }
   }
 }
 
@@ -579,6 +584,10 @@
   .welcome {
     h1 {
       font-size: 20px;
+    }
+
+    p {
+      font-size: 13px;
     }
   }
 }
@@ -588,6 +597,10 @@
     h1 {
       font-size: 25px;
     }
+
+    p {
+      font-size: 14px;
+    }
   }
 }
 
@@ -596,13 +609,45 @@
     h1 {
       font-size: 30px;
     }
+
+    p {
+      font-size: 15px;
+    }
   }
 }
 
 @media (min-width: 760px) {
   .welcome {
     h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .welcome {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome {
+    h1 {
       font-size: 50px;
+    }
+
+    p {
+      font-size: 16px;
     }
   }
 }
@@ -642,7 +687,7 @@
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 950px) {
   .container {
     .welcome {
       .welcome-content {
