@@ -117,19 +117,14 @@ function closeMenu() {
 }
 
 function initialize() {
-  if (localStorage.getItem("theme") === "") {
-    localStorage.setItem("dark");
+  let theme = localStorage.getItem("theme");
 
-    body.classList.remove("light");
-    body.classList.add("dark");
-
-    moon.style.display = "none";
-    moonMenu.style.display = "none";
-    sun.style.display = "block";
-    sunMenu.style.display = "block";
+  if (!theme) {
+    theme = "dark";
+    localStorage.setItem("theme", theme);
   }
 
-  if (localStorage.getItem("theme") === "light") {
+  if (theme === "light") {
     body.classList.remove("dark");
     body.classList.add("light");
 
@@ -137,9 +132,7 @@ function initialize() {
     sunMenu.style.display = "none";
     moon.style.display = "block";
     moonMenu.style.display = "block";
-  }
-
-  if (localStorage.getItem("theme") === "dark") {
+  } else if (theme === "dark") {
     body.classList.remove("light");
     body.classList.add("dark");
 
