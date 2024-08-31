@@ -16,7 +16,6 @@
     left: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
-    width: 60%;
     height: 80%;
     overflow: auto;
     box-shadow: var(--border-color) 0px 5px 15px;
@@ -640,6 +639,10 @@
 }
 
 @media (min-width: 1200px) {
+  .modal {
+    width: 60%;
+  }
+
   .welcome {
     h1 {
       font-size: 50px;
@@ -648,6 +651,23 @@
     p {
       font-size: 16px;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    .welcome {
+      .welcome-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+
+  .modal {
+    width: 80%;
   }
 }
 
@@ -668,19 +688,6 @@
       .picture {
         height: 200px;
         width: 200px;
-      }
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .container {
-    .welcome {
-      .welcome-content {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
       }
     }
   }
