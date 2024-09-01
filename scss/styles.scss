@@ -123,6 +123,7 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 40px;
+      border: 1px solid red;
 
       .picture {
         border-radius: 50%;
@@ -133,9 +134,9 @@
         border-bottom: 5px solid var(--border-color);
       }
 
-      .text {
-        border: 1px solid red;
-      }
+      // .text {
+      //   border: 1px solid red;
+      // }
 
       .fullstackContainer {
         display: inline-block;
@@ -712,19 +713,7 @@
   }
 }
 
-@media (max-width: 1900px) {
-  .content {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1800px) {
-  .content {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1300px) {
+@media (min-width: 0px) {
   .content {
     width: 100%;
   }
