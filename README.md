@@ -4,16 +4,16 @@
 
 ## Inspiration
 
-I have wanted to create a portfolio website for myself for a long time, and I finally managed to do it.
+Creating a portfolio website has been a long-standing goal, and I’m excited to have finally made it happen.
 
 ## Challenges
 
-Designing an eye-catching easy-to-browse layout that is accessible on all devices, including mobile.
+I focused on designing a visually appealing, user-friendly layout that’s accessible on all devices, including mobile.
 
 ## Lessons Learned
 
-I learned to be proud of your creations.
+Through this project, I gained experience with responsive web design and improved my skills in front-end development.
 
 ## The Website
 
-This is my portfolio website! Here, you can find my résumé, technical skills, projects, and interests.
+Welcome to my portfolio! Here, you can explore my résumé, technical skills, projects, and personal interests.
