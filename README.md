@@ -16,4 +16,4 @@ Through this project, I gained experience with responsive web design and improve
 
 ## The Website
 
-Welcome to my portfolio! Here, you can explore my résumé, technical skills, projects, and personal interests.
+Welcome to my first iteration of my portfolio! Here, you can explore my résumé, technical skills, projects, and personal interests.
